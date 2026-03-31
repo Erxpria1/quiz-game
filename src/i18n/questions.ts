@@ -575,6 +575,249 @@ export const questions: Question[] = [
       tr: "Yapay zeka, prefabrik inşaatlarda yapısal tasarımları optimize etmek, üretim programları planlamak, bakım ihtiyaçlarını tahmin etmek ve bilgisayarlı görü ile kalite kontrol denetimleri yapmak için kullanılır.",
     },
   },
+  {
+    id: 22,
+    category: "sustainability",
+    question: {
+      en: "What is the main environmental advantage of prefabricated construction?",
+      tr: "Prefabrik inşaatın ana çevresel avantajı nedir?",
+    },
+    options: {
+      en: [
+        "Less noise pollution",
+        "Reduced waste generation",
+        "Faster construction only",
+        "Lower transportation costs",
+      ],
+      tr: [
+        "Daha az gürültü kirliliği",
+        "Daha az atık oluşumu",
+        "Sadece daha hızlı inşaat",
+        "Daha düşük nakliye maliyetleri",
+      ],
+    },
+    correctAnswer: 1,
+    explanation: {
+      en: "Prefabricated construction significantly reduces waste generation through precise material cutting in factory conditions, with up to 90% less waste compared to traditional construction.",
+      tr: "Prefabrik inşaat, fabrika koşullarında hassas malzeme kesimi sayesinde atık oluşumunu önemli ölçüde azaltır ve geleneksel inşaata göre %90'a kadar daha az atık oluşur.",
+    },
+  },
+  {
+    id: 23,
+    category: "modular",
+    question: {
+      en: "What distinguishes modular construction from traditional prefabrication?",
+      tr: "Modüler inşaatı geleneksel prefabrikasyondan ayıran nedir?",
+    },
+    options: {
+      en: [
+        "Modular uses only wood",
+        "Modular creates complete 3D volumetric units",
+        "Modular is only for small buildings",
+        "There is no difference",
+      ],
+      tr: [
+        "Modüler sadece ahşap kullanır",
+        "Modüler tam 3D hacimsel birimler oluşturur",
+        "Modüler sadece küçük binalar içindir",
+        "Fark yoktur",
+      ],
+    },
+    correctAnswer: 1,
+    explanation: {
+      en: "Modular construction differs by creating complete 3D volumetric units (modules) in factories that are up to 90% complete before transport, including interior finishes.",
+      tr: "Modüler inşaat, fabrikalarda iç kaplamalar dahil %90'a kadar tamamlanan ve nakliyeye hazır tam 3D hacimsel birimler (modüller) oluşturarak farklılık gösterir.",
+    },
+  },
+  {
+    id: 24,
+    category: "steel-structures",
+    question: {
+      en: "What is the primary advantage of steel in prefabricated structures?",
+      tr: "Prefabrik yapılarda çeliğin birincil avantajı nedir?",
+    },
+    options: {
+      en: [
+        "Low cost",
+        "High strength-to-weight ratio",
+        "Natural appearance",
+        "Easy to paint",
+      ],
+      tr: [
+        "Düşük maliyet",
+        "Yüksek mukavemet/ağırlık oranı",
+        "Doğal görünüm",
+        "Boyaması kolay",
+      ],
+    },
+    correctAnswer: 1,
+    explanation: {
+      en: "Steel offers an exceptional strength-to-weight ratio, allowing for long spans and lighter foundations while maintaining structural integrity.",
+      tr: "Çelik, yapısal bütünlüğü korurken uzun açıklıklar ve daha hafif temeller sağlayan olağanüstü bir mukavemet/ağırlık oranı sunar.",
+    },
+  },
+  {
+    id: 25,
+    category: "installation",
+    question: {
+      en: "What is the critical factor for transporting prefabricated elements?",
+      tr: "Prefabrik elemanların taşınmasında kritik faktör nedir?",
+    },
+    options: {
+      en: [
+        "Color matching",
+        "Size and weight limitations of roads",
+        "Weather conditions only",
+        "Time of day",
+      ],
+      tr: [
+        "Renk uyumu",
+        "Yolların boyut ve ağırlık sınırlamaları",
+        "Sadece hava koşulları",
+        "Günün saati",
+      ],
+    },
+    correctAnswer: 1,
+    explanation: {
+      en: "Transporting prefabricated elements requires careful planning considering road size limitations, bridge clearances, weight restrictions, and turning radii.",
+      tr: "Prefabrik elemanların taşınması, yol boyut sınırlamaları, köprü geçişleri, ağırlık kısıtlamaları ve dönüş yarıçapları göz önünde bulundurularak dikkatli planlama gerektirir.",
+    },
+  },
+  {
+    id: 26,
+    category: "concrete-tech",
+    question: {
+      en: "What is precast concrete?",
+      tr: "Önceden dökülmüş beton (precast) nedir?",
+    },
+    options: {
+      en: [
+        "Concrete mixed on-site",
+        "Concrete cast in factory and transported to site",
+        "Concrete without reinforcement",
+        "Lightweight concrete only",
+      ],
+      tr: [
+        "Şantiyede karıştırılan beton",
+        "Fabrikada dökülen ve şantiyeye taşınan beton",
+        "Donatısız beton",
+        "Sadece hafif beton",
+      ],
+    },
+    correctAnswer: 1,
+    explanation: {
+      en: "Precast concrete is cast in a controlled factory environment, cured to optimal strength, then transported to the construction site for assembly.",
+      tr: "Önceden dökülmüş beton, kontrollü bir fabrika ortamında dökülür, optimum dayanıma kadar kürlenir, sonra montaj için inşaat alanına taşınır.",
+    },
+  },
+  {
+    id: 27,
+    category: "safety",
+    question: {
+      en: "Why is prefabricated construction considered safer than traditional methods?",
+      tr: "Prefabrik inşaat neden geleneksel yöntemlerden daha güvenli kabul edilir?",
+    },
+    options: {
+      en: [
+        "Fewer workers needed",
+        "More controlled factory environment, less work at height",
+        "Only simple structures",
+        "No heavy equipment needed",
+      ],
+      tr: [
+        "Daha az işçi gerekli",
+        "Daha kontrollü fabrika ortamı, yükseklikte daha az çalışma",
+        "Sadece basit yapılar",
+        "Ağır ekipmana gerek yok",
+      ],
+    },
+    correctAnswer: 1,
+    explanation: {
+      en: "Prefabricated construction is safer because most work occurs in controlled factory environments at ground level, reducing risks from weather, height, and site conditions.",
+      tr: "Prefabrik inşaat daha güvenlidir çünkü çoğu çalışma kontrollü fabrika ortamlarında yer seviyesinde gerçekleşir, böylece hava, yükseklik ve şantiye koşullarından kaynaklanan riskler azalır.",
+    },
+  },
+  {
+    id: 28,
+    category: "building-codes",
+    question: {
+      en: "What must be verified before installing prefabricated elements?",
+      tr: "Prefabrik elemanların montajından önce ne doğrulanmalıdır?",
+    },
+    options: {
+      en: [
+      "Color preferences",
+      "Compliance with local building codes and regulations",
+      "Brand of materials",
+      "Delivery truck type",
+      ],
+      tr: [
+        "Renk tercihleri",
+        "Yerel yapı kodları ve yönetmeliklere uyum",
+        "Malzeme markası",
+        "Teslimat kamyonu türü",
+      ],
+    },
+    correctAnswer: 1,
+    explanation: {
+      en: "All prefabricated elements must comply with local building codes, fire regulations, seismic requirements, and structural standards before installation.",
+      tr: "Tüm prefabrik elemanlar, montajdan önce yerel yapı kodlarına, yangın yönetmeliklerine, deprem gereksinimlerine ve yapısal standartlara uymalıdır.",
+    },
+  },
+  {
+    id: 29,
+    category: "quality-control",
+    question: {
+      en: "What is a key quality control advantage of factory production?",
+      tr: "Fabrika üretiminin temel kalite kontrol avantajı nedir?",
+    },
+    options: {
+      en: [
+        "Faster production",
+        "Consistent conditions allow for rigorous testing and inspection",
+        "Cheaper materials",
+        "Less supervision needed",
+      ],
+      tr: [
+        "Daha hızlı üretim",
+        "Tutarlı koşullar titiz test ve denetim sağlar",
+        "Daha ucuz malzemeler",
+        "Daha az gözetim gerekli",
+      ],
+    },
+    correctAnswer: 1,
+    explanation: {
+      en: "Factory production provides consistent temperature, humidity, and conditions that enable rigorous quality control testing not possible on variable construction sites.",
+      tr: "Fabrika üretimi, değişken inşaat alanlarında mümkün olmayan titiz kalite kontrol testleri sağlayan tutarlı sıcaklık, nem ve koşullar sunar.",
+    },
+  },
+  {
+    id: 30,
+    category: "future-tech",
+    question: {
+      en: "How does 3D printing complement prefabricated construction?",
+      tr: "3D yazdırma prefabrik inşaatı nasıl tamamlar?",
+    },
+    options: {
+      en: [
+        "Replaces all prefabrication",
+        "Creates complex custom components efficiently",
+        "Only for small models",
+        "Too expensive for construction",
+      ],
+      tr: [
+        "Tüm prefabrikasyonun yerini alır",
+        "Karmaşık özel bileşenleri verimli şekilde oluşturur",
+        "Sadece küçük modeller için",
+        "İnşaat için çok pahalı",
+      ],
+    },
+    correctAnswer: 1,
+    explanation: {
+      en: "3D printing complements prefabrication by creating complex, custom components and molds efficiently, enabling designs that would be difficult or expensive with traditional methods.",
+      tr: "3D yazdırma, karmaşık özel bileşenler ve kalıpları verimli bir şekilde oluşturarak prefabrikasyonu tamamlar ve geleneksel yöntemlerle zor veya pahalı olabilecek tasarımları mümkün kılar.",
+    },
+  },
 ];
 
 export function getQuestions(locale: string) {
