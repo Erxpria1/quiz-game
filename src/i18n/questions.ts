@@ -548,6 +548,33 @@ export const questions: Question[] = [
       tr: "Doğru tasarlanmış ve inşa edilmiş prefabrik yapıların ömrü 50 yıl ve üzeridir, hatta bazıları 100 yıla kadar dayanabilir.",
     },
   },
+  {
+    id: 21,
+    category: "ai-automation",
+    question: {
+      en: "How is Artificial Intelligence (AI) used in modern prefabricated construction?",
+      tr: "Yapay zeka (AI) modern prefabrik inşaatlarda nasıl kullanılır?",
+    },
+    options: {
+      en: [
+        "Only for decorative purposes",
+        "For optimizing design, production planning, and quality control",
+        "For replacing all construction workers",
+        "Only for accounting tasks",
+      ],
+      tr: [
+        "Sadece dekoratif amaçlar için",
+        "Tasarımı optimize etmek, üretim planlaması ve kalite kontrolü için",
+        "Tüm inşaat işçilerinin yerini almak için",
+        "Sadece muhasebe görevleri için",
+      ],
+    },
+    correctAnswer: 1,
+    explanation: {
+      en: "AI is used in prefabricated construction to optimize structural designs, plan production schedules, predict maintenance needs, and perform quality control inspections through computer vision.",
+      tr: "Yapay zeka, prefabrik inşaatlarda yapısal tasarımları optimize etmek, üretim programları planlamak, bakım ihtiyaçlarını tahmin etmek ve bilgisayarlı görü ile kalite kontrol denetimleri yapmak için kullanılır.",
+    },
+  },
 ];
 
 export function getQuestions(locale: string) {
