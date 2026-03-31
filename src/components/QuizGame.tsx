@@ -348,8 +348,8 @@ function QuizGameComponent() {
           </div>
         </div>
 
-        {/* Question Grid V3 */}
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-3 sm:gap-4">
+        {/* Question Grid V3 - Enlarged Edition */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 sm:gap-6">
           {shuffledQuestions.map((q, index) => {
             const isCorrect = correctAnswers.includes(q.id);
             const isWrong = wrongAnswers.includes(q.id);
@@ -362,23 +362,23 @@ function QuizGameComponent() {
                 onClick={() => handleQuestionClick(q)}
                 disabled={isAnswered}
                 className={`
-                  aspect-square rounded-2xl border-2 flex flex-col items-center justify-center transition-all relative overflow-hidden group cursor-pointer
+                  aspect-square rounded-[32px] border-3 flex flex-col items-center justify-center transition-all relative overflow-hidden group cursor-pointer
                   ${isCorrect 
-                    ? "bg-emerald-500/20 border-emerald-500/50 shadow-[0_0_15px_rgba(34,197,94,0.2)]" 
+                    ? "bg-emerald-500/20 border-emerald-500 shadow-[0_0_20px_rgba(34,197,94,0.3)]" 
                     : isWrong
-                    ? "bg-rose-500/10 border-rose-500/20 opacity-40"
-                    : `bg-slate-900/50 border-white/5 hover:border-sky-500/50 hover:scale-105 hover:bg-slate-900 active:scale-95`
+                    ? "bg-rose-500/10 border-rose-500/30 opacity-40"
+                    : `bg-slate-900/40 border-white/10 hover:border-sky-500 hover:scale-105 hover:bg-slate-800 active:scale-95 shadow-lg`
                   }
                 `}
               >
-                <span className={`text-2xl font-black ${isCorrect ? "text-emerald-400" : isWrong ? "text-rose-400" : "text-slate-700 group-hover:text-white"}`}>
+                <span className={`text-4xl sm:text-5xl font-black tracking-tighter ${isCorrect ? "text-emerald-400" : isWrong ? "text-rose-400" : "text-slate-600 group-hover:text-white group-hover:neon-text-blue"}`}>
                   {index + 1}
                 </span>
                 {!isAnswered && (
-                  <div className={`absolute bottom-0 left-0 right-0 h-1 ${theme.bg.replace("bg-", "bg-").split(" ")[0].replace("/10", "/40")}`} />
+                  <div className={`absolute bottom-0 left-0 right-0 h-2 ${theme.bg.replace("bg-", "bg-").split(" ")[0].replace("/10", "/60")}`} />
                 )}
-                {isCorrect && <span className="absolute top-1 right-2 text-xs">✅</span>}
-                {isWrong && <span className="absolute top-1 right-2 text-xs">❌</span>}
+                {isCorrect && <span className="absolute top-2 right-4 text-lg">✅</span>}
+                {isWrong && <span className="absolute top-2 right-4 text-lg">❌</span>}
               </button>
             );
           })}
