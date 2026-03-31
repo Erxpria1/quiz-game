@@ -3,7 +3,6 @@
 import { useState, useEffect, useRef, memo, useTransition, useCallback } from "react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { getQuestions, LocalizedQuestion, questions } from "@/i18n/questions";
-import Page60Card from "@/components/Page60Card";
 import { formatTime, shuffleArray, isMobileViewport, ANSWER_LABELS } from "@/lib/utils";
 
 type GameState = "menu" | "playing" | "finished";
@@ -399,7 +398,6 @@ function QuizGameComponent() {
               </button>
             );
           })}
-          <Page60Card />
         </div>
       </div>
     </div>
