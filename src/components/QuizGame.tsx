@@ -222,26 +222,26 @@ function QuizGameComponent() {
     const theme = categoryTheme[selectedQuestion.category] || categoryTheme.definition;
 
     return (
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 backdrop-blur-xl bg-slate-950/40" onClick={closeCard}>
+      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 backdrop-blur-xl bg-slate-950/40" onClick={closeCard}>
         <div 
-          className="glass-card-v3 p-6 sm:p-10 w-full max-w-5xl max-h-[90vh] overflow-y-auto animate-card-entry relative tech-border"
+          className="glass-card-v3 p-5 sm:p-8 w-full max-w-2xl md:max-w-3xl max-h-[85vh] sm:max-h-[90vh] overflow-y-auto animate-card-entry relative tech-border shadow-2xl"
           onClick={e => e.stopPropagation()}
         >
-          <div className="flex justify-between items-start mb-8">
-            <div className="flex items-center gap-3">
-              <span className={`px-4 py-1.5 ${theme.bg} ${theme.color} ${theme.border} border rounded-full text-xs font-bold uppercase tracking-widest`}>
+          <div className="flex justify-between items-start mb-6 sm:mb-8 gap-4">
+            <div className="flex items-center gap-2 sm:gap-3">
+              <span className={`px-3 py-1 sm:px-4 sm:py-1.5 ${theme.bg} ${theme.color} ${theme.border} border rounded-full text-xs font-bold uppercase tracking-widest`}>
                 {selectedQuestion.category.replace("-", " ")}
               </span>
               <span className="text-slate-600 text-xs font-mono">ID: #{selectedQuestion.id.toString().padStart(3, '0')}</span>
             </div>
-            <button onClick={closeCard} className="text-slate-500 hover:text-white text-3xl transition-transform hover:rotate-90 cursor-pointer">&times;</button>
+            <button onClick={closeCard} className="text-slate-500 hover:text-white text-2xl sm:text-3xl transition-transform hover:rotate-90 cursor-pointer">&times;</button>
           </div>
 
-          <h2 className="text-xl sm:text-3xl text-white font-medium mb-10 text-center leading-relaxed">
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white font-medium mb-6 sm:mb-10 text-center leading-relaxed">
             {selectedQuestion.question}
           </h2>
 
-          <div className="grid gap-3 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
             {selectedQuestion.options.map((option, index) => {
               const isCorrect = index === selectedQuestion.correctAnswer;
               const isSelected = selectedAnswer === index;
@@ -304,8 +304,9 @@ function QuizGameComponent() {
         {/* V3 Header */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-6 border-b border-white/5 pb-8">
           <div>
-            <h1 className="text-2xl sm:text-4xl font-bold text-white mb-1 tracking-tight uppercase">
-              AGALAR KÜLTÜR GRUP -mühendislik
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight">
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">AGALAR MÜHENDİSLİK</span>
+              <span className="text-slate-500"> GRUP</span>
             </h1>
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2 text-slate-500 text-sm">
