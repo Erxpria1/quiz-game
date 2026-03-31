@@ -1,10 +1,11 @@
 "use client";
 
-import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls, Stars, Float, Points, Sparkles } from "@react-three/drei";
 import { Suspense, useMemo, useRef, useState, useEffect } from "react";
 import dynamic from "next/dynamic";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { OrbitControls, Stars, Float, Points, Sparkles } from "@react-three/drei";
 import * as THREE from "three";
+import { isMobileViewport, isIOSDevice } from "@/lib/utils";
 
 const Quiz3D = dynamic(() => import("./Quiz3D"), { ssr: false });
 
@@ -110,14 +111,8 @@ export default function Scene() {
   const [isIOS, setIsIOS] = useState(false);
 
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    const checkIOS = () => {
-      const ua = navigator.userAgent;
-      return /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-    };
-
-    checkMobile();
-    setIsIOS(checkIOS());
+    const checkMobile = () => setIsMobile(isMobileViewport());
+    setIsIOS(isIOSDevice());
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
   }, []);

@@ -4,10 +4,11 @@ import { useState, useEffect, useRef, memo, useTransition, useCallback } from "r
 import { useLanguage } from "@/i18n/LanguageContext";
 import { getQuestions, LocalizedQuestion, questions } from "@/i18n/questions";
 import Page60Card from "@/components/Page60Card";
+import { formatTime, shuffleArray, isMobileViewport, ANSWER_LABELS } from "@/lib/utils";
 
 type GameState = "menu" | "playing" | "finished";
 
-const categoryTheme: Record<string, { color: string, border: string, bg: string }> = {
+const categoryTheme: Record<string, { color: string; border: string; bg: string }> = {
   definition: { color: "text-sky-400", border: "border-sky-500/30", bg: "bg-sky-500/10" },
   advantages: { color: "text-emerald-400", border: "border-emerald-500/30", bg: "bg-emerald-500/10" },
   "structural-systems": { color: "text-indigo-400", border: "border-indigo-500/30", bg: "bg-indigo-500/10" },
@@ -22,23 +23,6 @@ const categoryTheme: Record<string, { color: string, border: string, bg: string 
   components: { color: "text-fuchsia-400", border: "border-fuchsia-500/30", bg: "bg-fuchsia-500/10" },
   durability: { color: "text-green-400", border: "border-green-500/30", bg: "bg-green-500/10" },
 };
-
-function formatTime(seconds: number): string {
-  const m = Math.floor(seconds / 60);
-  const s = seconds % 60;
-  return `${m}:${s.toString().padStart(2, "0")}`;
-}
-
-function shuffleArray<T>(array: T[]): T[] {
-  const shuffled = [...array];
-  for (let i = shuffled.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-  }
-  return shuffled;
-}
-
-const ANSWER_LABELS = ["A", "B", "C", "D"];
 
 function QuizGameComponent() {
   const { locale, t } = useLanguage();
@@ -60,7 +44,7 @@ function QuizGameComponent() {
   const initialRender = useRef(true);
 
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    const checkMobile = () => setIsMobile(isMobileViewport());
     checkMobile();
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
