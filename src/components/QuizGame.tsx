@@ -155,25 +155,56 @@ function QuizGameComponent() {
 
   if (gameState === "menu") {
     return (
-      <div className="min-h-screen flex items-center justify-center p-4 relative z-10">
-        <div className="glass-card-v3 p-8 sm:p-12 max-w-2xl w-full text-center animate-card-entry tech-border">
-          <div className="mb-8">
-            <div className="text-6xl mb-4 animate-bounce-custom">🏗️</div>
-            <h1 className="text-3xl sm:text-5xl font-bold text-sky-400 neon-text-blue mb-2 uppercase tracking-tighter">
-              {t.menuTitle}
+      <div className="min-h-screen flex items-center justify-center p-4 sm:p-6 relative z-10">
+        <div className="glass-card-v3 p-6 sm:p-10 md:p-12 max-w-lg sm:max-w-xl w-full text-center animate-card-entry tech-border">
+          <div className="mb-8 sm:mb-10">
+            <div className="relative inline-block mb-4">
+              <div className="text-5xl sm:text-6xl animate-bounce-custom">🏗️</div>
+              <div className="absolute -inset-4 bg-sky-500/20 rounded-full blur-xl animate-pulse" />
+            </div>
+            <h1 className="text-2xl sm:text-4xl md:text-5xl font-black text-white mb-3 tracking-tight">
+              <span className="bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent">AGALAR</span>
+              <span className="text-slate-400"> QUIZ</span>
             </h1>
-            <div className="h-1 w-24 bg-sky-500/50 mx-auto mb-4" />
-            <h2 className="text-xl sm:text-2xl text-slate-300 font-light italic">{t.menuSubtitle}</h2>
+            <div className="h-1 w-16 sm:w-20 bg-gradient-to-r from-sky-500 to-cyan-500 mx-auto mb-4 rounded-full" />
+            <p className="text-slate-400 text-sm sm:text-base font-medium uppercase tracking-widest">
+              {t.menuSubtitle}
+            </p>
           </div>
-          <p className="text-slate-400 mb-8 text-lg border-y border-white/5 py-6 leading-relaxed">
-            {t.menuDescription(questions.length)}
-          </p>
+          
+          <div className="bg-white/5 rounded-2xl border border-white/10 p-4 sm:p-6 mb-6 sm:mb-8">
+            <div className="grid grid-cols-3 gap-4 text-center">
+              <div className="p-3 rounded-xl bg-sky-500/10 border border-sky-500/20">
+                <div className="text-2xl sm:text-3xl font-black text-sky-400">{questions.length}</div>
+                <div className="text-[10px] text-slate-500 uppercase tracking-wider">Sorular</div>
+              </div>
+              <div className="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20">
+                <div className="text-2xl sm:text-3xl font-black text-emerald-400">5</div>
+                <div className="text-[10px] text-slate-500 uppercase tracking-wider">Kategoriler</div>
+              </div>
+              <div className="p-3 rounded-xl bg-purple-500/10 border border-purple-500/20">
+                <div className="text-2xl sm:text-3xl font-black text-purple-400">✓</div>
+                <div className="text-[10px] text-slate-500 uppercase tracking-wider">Sınav</div>
+              </div>
+            </div>
+          </div>
+
           <button
             onClick={startGame}
-            className="w-full py-5 px-8 bg-sky-600 hover:bg-sky-500 text-white font-bold rounded-xl text-xl transition-all hover:scale-[1.02] active:scale-[0.98] shadow-[0_0_20px_rgba(56,189,248,0.3)] uppercase tracking-widest cursor-pointer"
+            className="group relative w-full py-4 sm:py-5 px-6 bg-gradient-to-r from-sky-600 to-sky-500 hover:from-sky-500 hover:to-cyan-500 text-white font-bold rounded-xl text-lg sm:text-xl transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-sky-500/25 uppercase tracking-wider cursor-pointer overflow-hidden"
           >
-            {t.startButton}
+            <span className="relative z-10 flex items-center justify-center gap-2">
+              <span>{t.startButton}</span>
+              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </span>
+            <div className="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-colors" />
           </button>
+          
+          <p className="text-slate-600 text-xs mt-4 uppercase tracking-widest">
+            v3.0 • AGALAR MÜHENDİSLİK GRUP
+          </p>
         </div>
       </div>
     );
