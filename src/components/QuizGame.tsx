@@ -224,7 +224,7 @@ function QuizGameComponent() {
     return (
       <div className="fixed inset-0 z-50 flex items-center justify-center p-4 backdrop-blur-xl bg-slate-950/40" onClick={closeCard}>
         <div 
-          className="glass-card-v3 p-6 sm:p-10 w-full max-w-3xl max-h-[90vh] overflow-y-auto animate-card-entry relative tech-border"
+          className="glass-card-v3 p-6 sm:p-10 w-full max-w-5xl max-h-[90vh] overflow-y-auto animate-card-entry relative tech-border"
           onClick={e => e.stopPropagation()}
         >
           <div className="flex justify-between items-start mb-8">
@@ -305,7 +305,7 @@ function QuizGameComponent() {
         <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-6 border-b border-white/5 pb-8">
           <div>
             <h1 className="text-2xl sm:text-4xl font-bold text-white mb-1 tracking-tight uppercase">
-              {t.pickQuestion} <span className="text-sky-500">_</span>
+              AGALAR KÜLTÜR GRUP -mühendislik
             </h1>
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2 text-slate-500 text-sm">
