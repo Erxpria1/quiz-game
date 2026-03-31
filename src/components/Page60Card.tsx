@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback, memo, useRef } from "react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { page60Questions, Page60Question } from "@/data/page60Questions";
+import FrameSystemDiagram from "@/components/FrameSystemDiagram";
 
 const ANSWER_LABELS = ["A", "B", "C", "D"];
 
@@ -342,6 +343,9 @@ function Page60CardComponent() {
                       })}
                     </div>
                   </div>
+
+                  {/* Frame System Diagram */}
+                  <FrameSystemDiagram />
 
                   {/* Question Area */}
                   <div className="flex-1 overflow-y-auto min-h-0">
